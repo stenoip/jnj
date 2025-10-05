@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JNJ Apartments - Your Tropical Getaway</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Reset and Font */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f8ff; /* Light, airy background */
+            line-height: 1.6;
+        }
+
+        /* --- Global Styles --- */
+
+        p {
+            font-size: 1.05em;
+            color: #333;
+        }
+
+        h2, h3, h4 {
+            color: #007bff; /* Primary Blue for Headings */
+        }
+
+        /* --- Header/Navigation --- */
+        .header {
+            padding: 15px 20px;
+            font-size: 28px;
+            text-align: left;
+            background: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            color: #0056b3;
+        }
+        .header h2 {
+            margin: 0;
+            font-weight: 700;
+        }
+
+        /* --- Hero Image Band --- */
+        .image-band {
+            width: 100%;
+            height: 450px; /* Increased height for impact */
+            background-image: url('image9.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex; /* Using flex for centering */
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .overlay-text {
+            color: white;
+            font-size: 3em;
+            font-weight: 700;
+            text-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+            margin-bottom: 15px;
+        }
+
+        .tagline {
+            color: #ffc107; /* Pop of color (Gold/Yellow) */
+            font-size: 1.5em;
+            font-weight: 400;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+            margin-bottom: 30px;
+        }
+
+        /* Call to Action Button */
+        .cta-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #ffc107;
+            color: #333;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta-button:hover {
+            background-color: #e0a800;
+            transform: translateY(-2px);
+        }
+
+        /* --- Main Content Layout (Flexbox) --- */
+        .row {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            gap: 20px; /* Space between columns */
+        }
+
+        .leftcolumn {
+            flex: 3; /* Takes up 75% of the space */
+        }
+
+        .rightcolumn {
+            flex: 1; /* Takes up 25% of the space */
+        }
+
+        /* --- Card Styling --- */
+        .card {
+            background-color: #ffffff; /* Crisp white background */
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle 3D effect */
+        }
+
+        .card h3 {
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+            color: #0056b3;
+        }
+
+        /* Image Styling */
+        .fakeimg {
+            margin-bottom: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .fakeimg img {
+            width: 100%;
+            height: auto; /* Let height adjust naturally */
+            display: block;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .fakeimg img:hover {
+            transform: scale(1.03); /* Zoom effect on hover */
+        }
+
+        /* List Styling */
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 10px;
+        }
+
+        ul li {
+            padding: 5px 0 5px 25px;
+            position: relative;
+            color: #333;
+        }
+
+        ul li::before {
+            content: '🌴'; /* Fun icon for list */
+            position: absolute;
+            left: 0;
+            color: #28a745; /* Green check/palm color */
+            font-size: 1.1em;
+        }
+
+        /* Contact Links */
+        .contact-link {
+            display: block;
+            font-size: 1.3em;
+            margin-top: 10px;
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-link:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+        /* --- Footer --- */
+        .footer {
+            padding: 25px 20px;
+            text-align: center;
+            background: #4189d1;
+            color: #ffffff;
+            margin-top: 30px;
+            font-size: 0.9em;
+        }
+
+        /* Responsive layout */
+        @media screen and (max-width: 800px) {
+            .row {
+                flex-direction: column; /* Stack columns vertically on smaller screens */
+            }
+            .overlay-text {
+                font-size: 2em;
+            }
+            .tagline {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h2>JNJ Apartments</h2>
+</div>
+
+<div class="image-band">
+    <div class="overlay-text">Escape to Paradise</div>
+    <div class="tagline">Your Luxurious Short-Term Rental in Tobago Awaits!</div>
+    <a href="#available-housing" class="cta-button">Explore Our Suites</a>
+</div>
+
+<div class="row">
+    <div class="leftcolumn">
+        <div class="card" id="available-housing">
+            <h3>Featured Residence: Cozy One-Bedroom Suite</h3>
+            <p><strong>Experience the ultimate island lifestyle</strong> just moments from the action!</p>
+
+            <div class="fakeimg" style="height:350px;"><img src="image6.jpg" alt="Stylish living room and kitchen area"></div>
+            <div class="fakeimg" style="height:350px;"><img src="image2.jpg" alt="Cozy bedroom with modern furniture"></div>
+
+            <a href="images.html" class="cta-button" style="margin-bottom: 20px; background-color: #007bff; color: white;">View Full Photo Gallery</a>
+
+            <hr style="margin: 25px 0;">
+
+            <h4>Suite Highlights:</h4>
+            <p>
+                These one-bedroom apartments offer the perfect blend of <strong>convenience</strong>  and <strong>luxury</strong>.
+                Two minutes from the main Mall and close to all major supermarkets, you're never far from what you need.
+                Enjoy a safe, quiet and comfortable retreat that guarantees a luxurious place to settle down,
+                all for an affordable price.
+            </p>
+
+            <ul>
+                <li>Blazing Fast - Dedicated WIFI for remote work or streaming</li>
+                <li>Contemporary Design and Modern Decor</li>
+                <li>The Latest Smart TV for all your entertainment needs</li>
+                <li>Powerful Air Conditioning in all rooms</li>
+                <li>Easy access to the main road and public transport</li>
+            </ul>
+
+            <p style="font-size: 1.3em; color: #28a745; font-weight: 600; text-align: center; margin-top: 25px;">
+                Starting from only <span style="font-size: 1.5em;">TTD$400.00</span> per night!
+            </p>
+
+            <hr style="margin: 25px 0;">
+
+            <h4>Find Us Here:</h4>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d476.9093148422521!2d-60.78713399085159!3d11.159450016890176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c49b214c31ee7e3%3A0x58de72bf7be2edfd!2sCharlie%20James%20Drive%2C%20Lowlands%2C%20Trinidad%20and%20Tobago!5e1!3m2!1sen!2sus!4v1759070655041!5m2!1sen!2sus" width="100%" height="300" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+    <div class="rightcolumn">
+        <div class="card">
+            <h3>Ready to Book? Contact Us!</h3>
+            <p>Our dedicated team is ready to assist you in planning your perfect Tobago stay.</p>
+            <hr>
+            <p>Call or WhatsApp Today:</p>
+            <a href="tel:+7912120" class="contact-link">721-2120</a>
+            <a href="tel:+4618881" class="contact-link">461-8881</a>
+            <hr>
+            <p>Send us an Email:</p>
+            <a href="mailto:info@jnjapartments.com" class="contact-link">info@jnjapartments.com</a>
+        </div>
+
+        <div class="card">
+            <h3>Why Choose JNJ?</h3>
+            <p>We're dedicated to providing more than just a room, we provide an experience.</p>
+            <ul>
+                <li><strong style="color: #007bff;">Premier Locations</strong></li>
+                <li><strong style="color: #007bff;">Immaculate Cleanliness</strong></li>
+                <li><strong style="color: #007bff;">24/7 Guest Support</strong></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <p>JNJ Apartments: Your Home in Tobago.</p>
+    <p>© 2025 JNJ Apartments. All Rights Reserved.</p>
+    <hr>
+    <p>Powered by <a href ="https://github.com/stenoip">Stenoip Company</a></p>
+</div>
+
+</body>
+</html>
